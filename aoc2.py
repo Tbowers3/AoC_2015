@@ -3,7 +3,7 @@ import re
 
 file = r"C:\Users\tobias.bowers\Desktop\2015_aoc2.txt"
 data = pathlib.Path(file).read_text()
-mod_data = data.split()
+#mod_data = data.split('x')
 total = 0
 index = 1000
 i = 0
@@ -28,15 +28,16 @@ while i <= index:
                     extra = l*h
             else:
                 extra = w*h
-            #total wrapping
+            #total wrapping paper
             sub_total = sqft + extra
             print(sub_total)
             total = total + sub_total
             print(total)
-        i += 3 
+            i += 3 
 
 #print(mod_data)
-print(total/3)
+print(sub_total)
+print(total)
 #print(l)
 #print(w)
 #print(h)
